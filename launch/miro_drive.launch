@@ -1,0 +1,15 @@
+<launch>
+
+  <!--miro_drive -->
+  <node pkg="miro_drive" type="miro_drive_node" name="miro_drive" output="screen" />
+
+  <!-- motor node -->
+  <include file="$(find xycar_motor)/launch/xycar_motor.launch" />
+
+  <!-- lidar node -->
+  <include file="$(find xycar_lidar)/launch/lidar_noviewer.launch" />
+
+  <!-- imu node -->
+  <!-- include file="$(find xycar_imu)/launch/xycar_imu_9dof.launch" -->
+
+</launch>
